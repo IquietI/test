@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CrossKnowledge - Code challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <style>
+        .maincomponent{
+            height: 100px;
+            max-width: 20%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            background: #f0efeb;
+        }
+        .maincomponent:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .grid-container:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            /*background-color: #2196F3;*/
+            background: #f0efeb;
+            padding: 3px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .grid-container-sub {
+            display: grid;
+            grid-template-columns: auto auto;
+            /*background-color: #2196F3;*/
+            padding: 3px;
+        }
+        .grid-item {
+            padding: 3px;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+        }
+        .small-icon{
+            height: 30px;
+            width: 30px;
+            margin: -7px;
+            padding-left: 10px;
+        }
+        .text-size{
+            font-size: 15px;
+        }
+        .movie-avatar{
+            /*margin-left: 40px;*/
+            max-width: 100%
+        }
+        .preview-button{
+            position: absolute;
+            background-color: #e7e7e7;
+            border: none;
+            font-size: 20px;
+            color: black;
+            padding: 8px;
+            width: 150px;
+            text-align: center;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 38px;
+            margin-right: 211px;
+            margin-top: 383px;
+            margin-left: -239px;
+            opacity: 0.6;
+            font-family: ui-monospace;
+        }
+        .description{
+            height: 133px;
+            text-align: start;
+            font-size: 14px;
+            font-style: oblique;
+            font-family: system-ui;
+            padding-bottom: 22px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="maincomponent">
+<article class="grid-container">
+    <header class="grid-item grid-container-sub">
+        <div class="grid-item">
+            <div class="grid-item">
+                Avengers: Infinity War
+            </div>
+            <div class="text-size">
+                156 minutes
+            </div>
+        </div>
+        <div class="grid-item text-size">
+            85% <img class="small-icon" src="https://www.rottentomatoes.com/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png" alt="">
+        </div>
+    </header>
+
+    <div class="asasf">
+        <img class="movie-avatar" src="https://i.ibb.co/9tLcR7s/avengers.jpg">
+        <a class="preview-button" href="https://www.rottentomatoes.com/m/avengers_infinity_war" target="_blank">
+            Check review
+        </a>
+    </div>
+
+    <footer class="grid-item">
+        <p class="description">
+            An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios' "Avengers: Infinity War" brings to the screen the ultimate, deadliest showdown of all text-size. The Avengers and their Super Hero allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+        </p>
+    </footer>
+</article>
+</body>
+</html>

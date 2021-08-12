@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CrossKnowledge - Code challenge</title>
+</head>
+<body>
+<script>
+    // This will create elements for testing, DO NOT change this code
+    (() => {
+        const MS_PER_MINUTE = 60000
+        const NOW = new Date()
+        let minutes = [0, 1, 30, 60, 6 * 60, 23 * 60, 24 * 60]
+        let dates = []
+
+        minutes.forEach((i) => dates.push(new Date(NOW - i * MS_PER_MINUTE)))
+
+    dates.forEach((item) => {
+        let el = document.createElement("div")
+        el.innerHTML = "Started "
+
+    let dt = document.createElement('span')
+    dt.className = 'js-date-format'
+    dt.innerHTML = item.toISOString()
+    el.appendChild(dt)
+    document.body.appendChild(el)
+    })
+    })();
+
+    setInterval(timeSince(new Date()), 1000);
+    function timeSince(date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+
+        var interval = seconds / 31536000;
+
+        if (interval > 1) {
+            return Math.floor(interval) + " years";
+        }
+        interval = seconds / 2592000;
+        if (interval > 1) {
+            return Math.floor(interval) + " months";
+        }
+        interval = seconds / 86400;
+        if (interval > 1) {
+            return Math.floor(interval) + " days";
+        }
+        interval = seconds / 3600;
+        if (interval > 1) {
+            return Math.floor(interval) + " hours";
+        }
+        interval = seconds / 60;
+        if (interval > 1) {
+            return Math.floor(interval) + " minutes";
+        }
+        return Math.floor(seconds) + " seconds";
+    }
+</script>
+</body>
+</html>
